@@ -9,6 +9,7 @@ use App\Http\Controllers\MetaConfigController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\PointController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SupperHitController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
@@ -74,4 +75,8 @@ Route::post('/rate/update/{id}',[PointController::class, 'rate_update'])->name('
 Route::post('/pay/{id}',[PointController::class, 'pay'])->name('pay');
 
 
+
+Route::get('/role',[RoleController::class, 'role'])->name('role');
+Route::post('/permission/store',[RoleController::class, 'permission_store'])->name('permission.store');
+Route::post('/role/store',[RoleController::class, 'role_store'])->name('role.store');
 

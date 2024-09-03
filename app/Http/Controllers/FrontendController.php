@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CategoryModel;
 use App\Models\CommentModel;
+use App\Models\ConfigMetaModel;
 use App\Models\ContactMessageModel;
 use App\Models\DownLinkModel;
 use App\Models\DownloadContent;
@@ -62,10 +63,13 @@ class FrontendController extends Controller
 
         $category = CategoryModel::where('slug' , $slug)->first();
         $movies = InventoryModel::where('slug' , $slug)->latest()->get();
+
+        $pageMeta = ConfigMetaModel::find(1);
         return view('frontend.category', [
             'movies'=>$movies,
             'category'=>$category,
             'slug'=>$slug,
+            'pageMeta'=>$pageMeta,
         ]);
     }
 
@@ -76,7 +80,10 @@ class FrontendController extends Controller
         // Unique Visitor
         $ip = $request->ip();
         UniqueWebVisitor::firstOrCreate(['ip' => $ip]);
-        return view('frontend.oscarWinning');
+        $pageMeta = ConfigMetaModel::find(1);
+        return view('frontend.oscarWinning', [
+            'pageMeta'=>$pageMeta,
+        ]);
     }
     function contact(Request $request){
         $all_ip = $request->ip();
@@ -85,7 +92,10 @@ class FrontendController extends Controller
         // Unique Visitor
         $ip = $request->ip();
         UniqueWebVisitor::firstOrCreate(['ip' => $ip]);
-        return view('frontend.contact');
+        $pageMeta = ConfigMetaModel::find(1);
+        return view('frontend.contact', [
+            'pageMeta'=>$pageMeta,
+        ]);
     }
 
     function contact_send(Request $request){
@@ -121,15 +131,24 @@ class FrontendController extends Controller
     }
 
     function disclaimer(){
-        return view('frontend.disclaimer');
+        $pageMeta = ConfigMetaModel::find(1);
+        return view('frontend.disclaimer', [
+            'pageMeta'=>$pageMeta,
+        ]);
     }
 
     function privacyPolicy(){
-        return view('frontend.privacyPolicy');
+        $pageMeta = ConfigMetaModel::find(1);
+        return view('frontend.privacyPolicy',[
+            'pageMeta'=>$pageMeta,
+        ]);
     }
 
     function search(){
-        return view('frontend.search');
+        $pageMeta = ConfigMetaModel::find(1);
+        return view('frontend.search', [
+            'pageMeta'=>$pageMeta,
+        ]);
     }
 
     function signin(){
@@ -145,11 +164,12 @@ class FrontendController extends Controller
         $comments = CommentModel::where("visitor_id",Auth::guard('visitor')->user()->id)->latest()->get();
         $count = CommentModel::where("visitor_id",Auth::guard('visitor')->user()->id)->count();
         $favorites = FavoriteModel::where("visitor_id",Auth::guard('visitor')->user()->id)->latest()->get();
-
+        $pageMeta = ConfigMetaModel::find(1);
         return view("frontend.profile",[
             'comments'=>$comments,
             'count'=>$count,
             'favorites'=>$favorites,
+            'pageMeta'=>$pageMeta,
         ]);
     }
 

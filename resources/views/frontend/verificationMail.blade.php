@@ -376,20 +376,7 @@
     <!--[if !mso]>-->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"
         type="text/css" />
-    <!--<![endif]-->
-    <!--[if mso]>
-<style type="text/css">
-img,p{margin:0;Margin:0;font-family:Lato,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:22px;font-weight:400;font-style:normal;font-size:16px;text-decoration:none;text-transform:none;letter-spacing:0;direction:ltr;color:#333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px}h1{margin:0;Margin:0;font-family:Roboto,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:34px;font-weight:400;font-style:normal;font-size:28px;text-decoration:none;text-transform:none;letter-spacing:0;direction:ltr;color:#333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px}h2{margin:0;Margin:0;font-family:Lato,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:30px;font-weight:400;font-style:normal;font-size:24px;text-decoration:none;text-transform:none;letter-spacing:0;direction:ltr;color:#333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px}h3{margin:0;Margin:0;font-family:Lato,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:26px;font-weight:400;font-style:normal;font-size:20px;text-decoration:none;text-transform:none;letter-spacing:0;direction:ltr;color:#333;text-align:left;mso-line-height-rule:exactly;mso-text-raise:2px}
-</style>
-<![endif]-->
-    <!--[if mso]>
-<xml>
-<o:OfficeDocumentSettings>
-<o:AllowPNG/>
-<o:PixelsPerInch>96</o:PixelsPerInch>
-</o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
+
 </head>
 
 <body id="body" class="t33" style="min-width:100%;Margin:0px;padding:0px;background-color:#F0F0F0;">
@@ -399,11 +386,6 @@ img,p{margin:0;Margin:0;font-family:Lato,BlinkMacSystemFont,Segoe UI,Helvetica N
                 <td class="t31"
                     style="font-size:0;line-height:0;mso-line-height-rule:exactly;background-color:#F0F0F0;"
                     valign="top" align="center">
-                    <!--[if mso]>
-<v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false">
-<v:fill color="#F0F0F0"/>
-</v:background>
-<![endif]-->
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
                         align="center" id="innerTable">
                         <tr>
@@ -411,16 +393,11 @@ img,p{margin:0;Margin:0;font-family:Lato,BlinkMacSystemFont,Segoe UI,Helvetica N
                                 <table class="t30" role="presentation" cellpadding="0" cellspacing="0"
                                     style="Margin-left:auto;Margin-right:auto;">
                                     <tr>
-                                        <!--[if mso]>
-<td width="600" class="t29" style="background-color:#FFFFFF;">
-<![endif]-->
                                         <!--[if !mso]>-->
                                         <td class="t29" style="background-color:#FFFFFF;width:480px;">
                                             <!--<![endif]-->
                                             <div class="t28"
                                                 style="display:inline-table;width:100%;text-align:center;vertical-align:top;">
-                                                <!--[if mso]>
-<table role="presentation" cellpadding="0" cellspacing="0" align="center" valign="top" width="600"><tr><td width="600" valign="top"><![endif]-->
                                                 <div class="t27"
                                                     style="display:inline-table;text-align:initial;vertical-align:inherit;width:100%;max-width:600px;">
                                                     <table role="presentation" width="100%" cellpadding="0"
@@ -443,10 +420,7 @@ img,p{margin:0;Margin:0;font-family:Lato,BlinkMacSystemFont,Segoe UI,Helvetica N
                                                                                 cellpadding="0" cellspacing="0"
                                                                                 style="Margin-left:auto;Margin-right:auto;">
                                                                                 <tr>
-                                                                                    <!--[if mso]>
-<td width="238" class="t2">
-<![endif]-->
-                                                                                    <!--[if !mso]>-->
+
                                                                                     <td class="t2"
                                                                                         style="width:238px;">
                                                                                         <!--<![endif]-->

@@ -1,5 +1,13 @@
-@push('style')
-
+@push('title')
+<title>{{$movie->title}} | CineNest – Online Movies, TV Shows, Cinema Website</title>
+@endpush
+@push('page_meta')
+<meta name="title" content="{{$movie->title}}" />
+<meta name="description" content="{{$movie->story_line}}" />
+<meta name="keywords" content="{{ $movie->keyword }}" />
+<meta property="og:title" content="{{ $movie->title }}" />
+<meta property="og:description" content="{{$movie->story_line}}" />
+<meta property="og:image" content="{{asset('uploads')}}/cover/{{$movie->cover}}" />
 @endpush
 @extends('layouts.frontend')
 @section('content')

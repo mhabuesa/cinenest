@@ -28,7 +28,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="Dmitry Volkov">
-	<title>HotFlix – Online Movies, TV Shows & Cinema HTML Template</title>
+    <title>CineNest – Online Movies, TV Shows, Cinema Website</title>
 </head>
 
 <body class="body">

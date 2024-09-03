@@ -265,7 +265,7 @@
         <!-- Messages -->
         <li class="menu-item {{$title == 'comments'?'active':''}}">
             <a href="{{route('comments')}}" class="menu-link">
-              <i class="menu-icon tf-icons ti ti-mail"></i>
+              <i class="menu-icon tf-icons ti ti-message"></i>
               <div data-i18n="Comments">Comments</div>
             </a>
         </li>
@@ -281,15 +281,6 @@
     </li>
     @endif
 
-    @if (Auth::user()->roll == 'admin')
-            <!-- Users -->
-    <li class="menu-item {{$title == 'users'?'active':''}}">
-        <a href="{{route('users')}}" class="menu-link">
-            <i class="fa-solid fa-users fa-lg me-2"></i>
-          <div data-i18n="Users">Users</div>
-        </a>
-    </li>
-    @endif
 
     @if (Auth::user()->roll == 'admin')
             <!-- Users -->
@@ -320,6 +311,35 @@
         </a>
     </li>
     @endif
+
+
+    <!-- System -->
+    <li class="menu-item
+        {{$url == '/role'?'open':''}}
+        {{$url == '/users'?'open':''}}
+        {{$title == 'movie_edit'?'open':''}}
+    ">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="fa-solid fa-gear me-2"></i>
+        <div data-i18n="System">System</div>
+      </a>
+
+      <ul class="menu-sub">
+
+        <li class="menu-item {{$title == 'role'?'active':''}}">
+            <a href="{{route('role')}}" class="menu-link">
+              <div data-i18n="Role Manager">Role Manager</div>
+            </a>
+        </li>
+
+        <li class="menu-item {{$title == 'users'?'active':''}}">
+            <a href="{{route('users')}}" class="menu-link">
+              <div data-i18n="Users">Users</div>
+            </a>
+        </li>
+
+      </ul>
+    </li>
 
   </ul>
 

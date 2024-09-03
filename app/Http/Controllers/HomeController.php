@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ActivityLog;
+use App\Models\ConfigMetaModel;
 use App\Models\DownloadContent;
 use App\Models\MovieModel;
 use App\Models\TotalContentVisitor;
@@ -27,10 +28,12 @@ class HomeController extends Controller
         $supperHits = MovieModel::where('supper_hit', 1)->latest()->get();
         $oscars = MovieModel::where('oscar', 1)->latest()->take(10)->get();
         $movies = MovieModel::latest()->get();
+        $pageMeta = ConfigMetaModel::find(1);
         return view('frontend.index', [
             'movies'=>$movies,
             'supperHits'=>$supperHits,
             'oscars'=>$oscars,
+            'pageMeta'=>$pageMeta,
         ]);
     }
 

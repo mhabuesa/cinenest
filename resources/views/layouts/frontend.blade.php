@@ -1,30 +1,5 @@
 @php
     $configMeta = App\Models\ConfigMetaModel::find(1);
-    $explode = explode('/', $_SERVER['REQUEST_URI']);
-    $title = $explode[1];
-    $title = ucwords($explode[1]);
-
-    if ($explode[1] == '') {
-        $title = 'Home';
-    } elseif ($explode[1] == 'cat') {
-        $slug = $explode[2];
-        $title = App\Models\CategoryModel::where('slug', $slug)->first()->category;
-    } elseif ($explode[1] == 'contact') {
-        $title = 'Contact';
-    } elseif ($explode[1] == 'mvi') {
-        $url = $explode[2];
-        $title = App\Models\MovieModel::where('url', $url)->first()->title;
-    }
-
-    if ($explode[1] == 'mvi') {
-        $url = $explode[2];
-        $pageMeta = App\Models\MovieModel::where('url', $url)->first();
-        $configMetaImage = $pageMeta->cover;
-    } else {
-        $pageMeta = App\Models\ConfigMetaModel::find(1);
-        $configMetaImage = App\Models\ConfigMetaModel::find(1)->image;
-    }
-
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -32,30 +7,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    @stack('title')
 
     <!-- Meta Elements -->
     {{-- Config Meta  --}}
+
     <meta name="owner" content="{{ $configMeta->owner }}" />
     <meta name="type" content="{{ $configMeta->type }}" />
     <meta name="url" content="{{ url()->full() }}" />
     <meta name="site_name" content="{{ $configMeta->site_name }}" />
     <meta name="google-site-verification" content="{{ $configMeta->verify }}" />
-    @if ($explode[1] == 'mvi')
-        <meta property="og:image" content="{{ asset('uploads') }}/cover/{{ $configMetaImage }}" />
-    @else
-        <meta property="og:image" content="{{ asset('uploads') }}/metaConfig/{{ $configMetaImage }}" />
-    @endif
     <meta property="og:type" content="{{ $configMeta->type }}" />
     <meta property="og:url" content="{{ url()->full() }}" />
     <meta property="og:site_name" content="{{ $configMeta->site_name }}" />
 
-    {{-- Page Meta  --}}
-    <meta name="title" content="{{ $pageMeta->title }}" />
-    <meta name="description" content="{{ $pageMeta->desp }}" />
-    <meta name="keywords" content="{{ $pageMeta->keyword }}" />
-    <meta property="og:title" content="{{ $pageMeta->title }}" />
-    <meta property="og:description" content="{{ $pageMeta->desp }}" />
+    @stack('page_meta')
+
     <!-- Meta Elements End -->
 
     <!-- CSS -->
@@ -82,8 +49,6 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Dmitry Volkov">
-    <title>{{ $title }} | CineNest – Online Movies, TV Shows & Cinema Website</title>
-
     {{-- fontawesome --}}
     <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-d53d10572a0e0d37cb8d614a3f177a0c.css?vsn=d">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">

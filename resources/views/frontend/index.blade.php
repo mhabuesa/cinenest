@@ -1,5 +1,15 @@
-@push('style')
+@push('title')
+<title>HOME | CineNest – Online Movies, TV Shows, Cinema Website</title>
+@endpush
+@push('page_meta')
+<meta name="title" content="{{ $pageMeta->title }}" />
+<meta name="description" content="{{ $pageMeta->desp }}" />
+<meta name="keywords" content="{{ $pageMeta->keyword }}" />
+<meta property="og:title" content="{{ $pageMeta->title }}" />
+<meta property="og:description" content="{{ $pageMeta->desp }}" />
+<meta property="og:image" content="{{ asset('uploads') }}/metaConfig/{{ $pageMeta->image }}" />
 
+{{-- <meta property="og:image" content="{{ asset('uploads') }}/cover/{{ $configMetaImage }}" /> --}}
 @endpush
 @extends('layouts.frontend')
 @section('content')
