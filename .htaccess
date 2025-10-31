@@ -1,0 +1,26 @@
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^cinenest\.net$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.cinenest\.net$
+RewriteRule ^/?$ "https\:\/\/www\.cinenest\.net\/" [R=301,L]
+
+
+<IfModule mod_rewrite.c>
+# RewriteEngine On
+# RewriteCond %{HTTP_HOST} ^yourdomain.com [NC]
+# RewriteRule ^(.*)$ http://www.yourdomain.com/$1 [L,R=301]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+<Files .env>
+  Order allow,deny
+  Deny from all
+</Files>
+
+<Files composer.json>
+  Order allow,deny
+  Deny from all
+</Files>
+

@@ -1,0 +1,3 @@
+User-agent: *  
+Allow: /  
+Sitemap: https://www.cinenest.net/sitemap.xml  
