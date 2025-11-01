@@ -93,35 +93,21 @@
 
 <!-- content -->
 <section class="content">
-    <div class="content__head">
+    <div class="content__head p-2">
         <div class="container">
             <div class="row m-auto">
                 <div class="col-12 ads_banner">
 
                     <div class="small_banner">
-                        <script type="text/javascript">
-                            atOptions = {
-                                'key': 'f4dddf3a78b15159461505fb58fca0e5',
-                                'format': 'iframe',
-                                'height': 50,
-                                'width': 320,
-                                'params': {}
-                            };
-                        </script>
-                        <script type="text/javascript" src="//nicecartrigezip.com/f4dddf3a78b15159461505fb58fca0e5/invoke.js"></script>
+                        <a href="https://wa.me/8801680582787" target="_blank">
+                            <img src="{{asset('frontend/img/add_small.png')}}" alt="">
+                        </a>
                     </div>
-                    
+
                     <div class="large_banner">
-                        <script type="text/javascript">
-                            atOptions = {
-                                'key': '6b79c2f5dd7b8884518c6d92d852968d',
-                                'format': 'iframe',
-                                'height': 90,
-                                'width': 428,
-                                'params': {}
-                            };
-                        </script>
-                        <script type="text/javascript" src="//nicecartrigezip.com/6b79c2f5dd7b8884518c6d92d852968d/invoke.js"></script>
+                        <a href="https://wa.me/8801680582787" target="_blank">
+                            <img src="{{asset('frontend/img/add_large.png')}}" alt="">
+                        </a>
                     </div>
 
                 </div>

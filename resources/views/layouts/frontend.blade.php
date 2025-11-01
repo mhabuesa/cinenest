@@ -20,9 +20,9 @@
 
         gtag('config', 'G-3PVGKK8ZDR');
     </script>
-    
+
     @stack('title')
-    
+
     <!-- Meta Elements -->
     {{-- Config Meta  --}}
 
@@ -58,7 +58,7 @@
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="{{ asset('frontend') }}/icon/favicon.png" sizes="32x32">
     <link rel="apple-touch-icon" href="{{ asset('frontend') }}/icon/favicon.png">
-    
+
     <!-- canonical -->
     <link rel="canonical" href="{{ url()->full() }}">
 
@@ -73,9 +73,6 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css">
     @stack('head')
-    
-    <!--Ads JS -->
-    <script type='text/javascript' src='//pl24587838.cpmrevenuegate.com/74/74/61/7474614c2f1ad4124d0f80ed7d9916da.js'></script>
 
 </head>
 
@@ -233,8 +230,8 @@
             window.location.href = link;
         });
     </script> --}}
-    
-    
+
+
 
 </body>
 
